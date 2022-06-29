@@ -1,0 +1,22 @@
+// .babelrc
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": "3.22"
+      }
+    ]
+  ],
+  "plugins": [
+    ["babel-plugin-transform-import-meta", { "module": "ES6" }],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    ["@babel/plugin-transform-async-to-generator"]
+  ]
+}

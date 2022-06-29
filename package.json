@@ -1,0 +1,46 @@
+{
+  "name": "vulcano_backend",
+  "version": "1.0.0",
+  "description": "web vulcano backend",
+  "main": "build/index.js",
+  "keywords": [],
+  "scripts": {
+    "dev": "nodemon -L --exec babel-node src/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel src --out-dir build",
+    "clean": "rm -rf build && mkdir build",
+    "start": "node build/index.js"
+  },
+  "author": "stampella jonathan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.2",
+    "morgan": "^1.10.0",
+    "rotating-file-stream": "^3.0.4",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/plugin-transform-async-to-generator": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "babel-plugin-transform-import-meta": "^2.2.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.6.2"
+  }
+}
