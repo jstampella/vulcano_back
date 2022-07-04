@@ -8,7 +8,9 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const url = `mongodb://${config.MONGO_USERNAME}:${config.MONGO_PASSWORD}@${config.IP_DB}:${config.PORT_DB}/${config.NAME_DB}?authSource=admin`;
+const url = `mongodb://${config.MONGO_USERNAME}:${config.MONGO_PASSWORD}@${config.IP_DB}:${config.PORT_DB}/${config.NAME_DB}`;
+//const url = `mongodb://admin:vulcano@vulcano_mongo:27017/vulcano_db?authSource=admin`;
+logger.info(url);
 
 export const iniciarDB = async () =>
   mongoose

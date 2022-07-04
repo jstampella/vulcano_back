@@ -1,8 +1,8 @@
 import { config as confg2 } from "dotenv";
 import path from "path";
 const __dirname = path.resolve("./");
-//Agregar archivo Env desde la ruta del server carpeta config si existe
-confg2({ path: path.resolve(__dirname, "src", "config", ".env") });
+//Agregar archivo Env desde la ruta del server si existe
+confg2({ path: path.resolve(__dirname, ".env") });
 
 const IP_SERVER = process.env.IP_SERVER || "localhost";
 const PORT_SERVER = process.env.PORT_SERVER || 3977;
